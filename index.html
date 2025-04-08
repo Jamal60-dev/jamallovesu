@@ -32,7 +32,7 @@
       width: 50px;
       height: 50px;
       background-size: cover;
-      opacity: 0.9;
+      opacity: 0.8;
       animation: fall linear infinite;
     }
 
@@ -65,9 +65,11 @@
       const flower = document.createElement('div');
       flower.classList.add('flower');
       flower.style.left = Math.random() * 100 + 'vw';
-      flower.style.animationDuration = 5 + Math.random() * 5 + 's';
-      flower.style.animationDelay = Math.random() * 5 + 's';
+      flower.style.animationDuration = (5 + Math.random() * 5) + 's';
+      flower.style.animationDelay = (Math.random() * 5) + 's';
       flower.style.backgroundImage = `url('${images[Math.floor(Math.random() * images.length)]}')`;
+      flower.style.width = '50px'; // flower size
+      flower.style.height = '50px'; // flower size
       document.body.appendChild(flower);
     }
   </script>
